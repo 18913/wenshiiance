@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <DIv class="POR123">
+        <h3 class="viewport1">基于Hive的多模态传感器温室作物监测与可视化系统设计与实现</h3>
+        
+    </DIv>
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基于Hive的多模态传感器温室作物监测与可视化系统设计与实现</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/icomoon.css">
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="column">
+            <div class="overview panel">
+                <div class="inner">
+                    <div class="item">
+                        <h4>6</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #006cff"></i>
+                            品种类型
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>12</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            病虫害种类
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>26503</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            监控作物
+                        </span>
+                    </div>
+                    <!-- <div class="item">
+                        <h4>108</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #ed3f35"></i>
+                            异常设备
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+            <!--监控-->
+            <div class="monitor panel">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="javascript:;" data-index="0" class="active">农作物详情</a>
+                        <a href="javascript:;" data-index="1">农作物阶段及病虫害指数</a>
+                    </div>
+                    <div class="content" style="display: block;">
+                        <div class="head">
+                            <span class="col">省份</span>
+                            <span class="col">作物种类</span>
+                            <span class="col">温室类型</span>
+                        </div>
+                        <div class="marquee-view">  
+                            <div class="marquee">  
+                                <div class="row">
+                                    <span class="col">北京市</span>
+                                    <span class="col">玉米</span>
+                                    <span class="col">玻璃温室</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">  
+                                    <span class="col">内蒙古自治区</span>  
+                                    <span class="col">草莓</span>  
+                                    <span class="col">玻璃屋顶温室</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">河北省</span>  
+                                    <span class="col">马铃薯</span>  
+                                    <span class="col">塑料薄膜温室</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">河北省</span>  
+                                    <span class="col">洋葱</span>  
+                                    <span class="col">冷框</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">
+                                    <span class="col">河北省</span>
+                                    <span class="col">西红柿</span>
+                                    <span class="col">塑料薄膜温室</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">  
+                                    <span class="col">江苏省</span>  
+                                    <span class="col">大豆</span>  
+                                    <span class="col">玻璃温室</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">广东省</span>  
+                                    <span class="col">菠萝</span>  
+                                    <span class="col">玻璃屋顶温室</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                               
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="content">  
+                        <div class="head">  
+                            <span class="col">作物名称</span>  
+                            <span class="col">生长阶段</span>  
+                            <span class="col">病虫害指数</span>  
+                        </div>  
+                        <div class="marquee-view">  
+                            <div class="marquee">  
+                                <div class="row">  
+                                    <span class="col">草莓</span>  
+                                    <span class="col">发芽</span>  
+                                    <span class="col">5</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">马铃薯</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">10</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">洋葱</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">7</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">燕麦</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">6</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">红薯</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">8</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">冬瓜</span>  
+                                    <span class="col">发芽</span>  
+                                    <span class="col">5</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">大豆</span>  
+                                    <span class="col">发芽</span>  
+                                    <span class="col">6</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">胡萝卜</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">4</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">苹果</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">5</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">辣椒</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">4</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">红薯</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">2</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">黄鳝</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">4</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">菠萝</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">10</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">玉米</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">2</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">干果</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">9</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">枸杞</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">4</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">蔬菜</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">0</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">红枣</span>  
+                                    <span class="col">成熟</span>  
+                                    <span class="col">9</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">大豆</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">6</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">大豆</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">2</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">黄瓜</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">6</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">葡萄</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">10</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">冬瓜</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">5</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">红枣</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">5</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">土豆</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">9</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">葡萄</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">1</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">大白菜</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">10</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">豆类</span>  
+                                    <span class="col">生长中</span>  
+                                    <span class="col">2</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">胡萝卜</span>  
+                                    <span class="col">发芽</span>  
+                                    <span class="col">3</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">马铃薯</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">3</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                                <div class="row">  
+                                    <span class="col">玉米</span>  
+                                    <span class="col">收获</span>  
+                                    <span class="col">6</span>  
+                                    <span class="icon-dot"></span>  
+                                </div>  
+                    
+                    
+                   </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--点位-->
+            <div class="point panel">
+                <div class="inner">
+                    <h3>重要地区点位分布统计</h3>
+                    <div class="chart">
+                        <div class="pie"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>26503</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    作物总数
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>418</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    本年度新增
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 地图 -->
+            <div class="map">
+                <h3>
+                    <span class="icon-cube"></span>
+                    数据统计
+                </h3>
+                <div class="chart">
+                    <div class="geo"></div>
+                </div>
+            </div>
+            <!-- 用户 -->
+            <div class="users panel">
+                <div class="inner">
+                    <h3>全国作物总量统计</h3>
+                    <div class="chart">
+                        <div class="bar"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>26503</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    作物总量
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>418</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    本月新增
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="order panel">
+                <div class="inner">
+                    <!-- 筛选 -->
+                    <div class="filter">
+                        <a href="javascript:;" data-key="day365" class="active">平均光照强度</a>
+                        <a href="javascript:;" data-key="day90">平均土壤湿度</a>
+                        <a href="javascript:;" data-key="day30">平均产量</a>
+                        <a href="javascript:;" data-key="day1">平均温度</a>
+                    </div>
+                    <!-- 数据 -->
+                    <div class="data">
+                        <div class="item">
+                            <h4>745</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #ed3f35;"></i>
+                                近30日
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4>731</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #eacf19;"></i>
+                                近90日
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 销售额 -->
+            <div class="sales panel">
+                <div class="inner">
+                    <div class="caption">
+                        <h3>温室总产量统计</h3>
+                        <a href="javascript:;" class="active" data-type="year">年</a>
+                        <a href="javascript:;" data-type="quarter">季</a>
+                        <a href="javascript:;" data-type="month">月</a>
+                        <a href="javascript:;" data-type="week">周</a>
+                    </div>
+                    <div class="chart">
+                        <div class="label">单位:万</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 渠道 季度 -->
+            <div class="wrap">
+                <div class="channel panel">
+                    <div class="inner">
+                        <h3>NPK平均分布</h3>
+                        <div class="data">
+                            <div class="item">
+                                <h4>132 <small>mg/L</small></h4>
+                                <span>
+                                    <!-- <i class="icon-plane"></i> -->
+                                    氮
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>106<small>mg/L</small></h4>
+                                <span>
+                                    <!-- <i class="icon-bag"></i> -->
+                                    磷
+                                </span>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>145<small>mg/L</small></h4>
+                                <span>
+                                    <!-- <i class="icon-train"></i> -->
+                                    钾
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>6.1<small>%</small></h4>
+                                <span>
+                                    <!-- <i class="icon-bus"></i> -->
+                                    PH值
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quarter panel">
+                    <div class="inner">
+                        <h3>一季度产量进度</h3>
+                        <div class="chart">
+                            <div class="box">
+                                <div class="gauge"></div>
+                                <div class="label">75<small> %</small></div>
+                            </div>
+                            <div class="data">
+                                <div class="item">
+                                    <h4>3,321</h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #6acca3"></i>
+                                        产量额
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <h4>132%</h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #ed3f35"></i>
+                                        同比增长
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 排行榜 -->
+            <div class="top panel">
+                <div class="inner">
+                    <div class="all">
+                        <h3>全国作物热榜</h3>
+                        <ul>
+                            <li>
+                                <i class="icon-cup1" style="color: #d93f36;"></i>
+                                新疆
+                            </li>
+                            <li>
+                                <i class="icon-cup2" style="color: #68d8fe;"></i>
+                                山东
+                            </li>
+                            <li>
+                                <i class="icon-cup3" style="color: #4c9bfd;"></i>
+                                江西
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="province">
+                        <h3>各省热销 <i class="date">// 近30日 //</i></h3>
+                        <div class="data">
+                            <ul class="sup">
+                                <li>
+                                    <span>北京</span>
+                                    <span>1,179 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span>河北</span>
+                                    <span>3,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span>上海</span>
+                                    <span>2,760 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span>江苏</span>
+                                    <span>2,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span>山东</span>
+                                    <span>2,760 <s class="icon-up"></s></span>
+                                </li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/index.js"></script>
+
+<script src="./js/china.js"></script>
+<script src="./js/mymap.js"></script>
+
+</html>
